@@ -1,0 +1,7 @@
+version: '2'
+services:
+  redis-g5-prom-rails:
+    image: redis:5-alpine
+    ports:
+      - "6379:6379"
+    mem_limit: 64m

@@ -130,7 +130,26 @@ This metric is left un-namespaced because it gives you the ability to compare th
 
 ## Development
 
-To run this engine's tests, you need redis running. Sorry. You need to do some finagling to get Sidekiq using fakeredis, and I didn't feel like spending the time on it. I'm using Sidekiq::Stats, which isn't part of any of sidekiq's normal testing setup.
+To run this engine's tests, you need redis running. The `docker-compose.yml`
+gives you one (provided you have docker installed) using:
+```
+$ docker-compose up -d
+```
+
+You'll need bundler for dependencies:
+```
+gem install bundler
+```
+
+To install dependencies (using bundler):
+```
+$ bundle
+```
+
+Run the specs with rspec (through bundler):
+```
+$ bundle exec rspec
+```
 
 ## License
 
