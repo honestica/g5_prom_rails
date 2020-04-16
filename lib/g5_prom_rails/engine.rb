@@ -49,6 +49,7 @@ module G5PromRails
           use Rack::ShowExceptions
           use Rack::Lint
           use Prometheus::Middleware::Exporter, per_process_opts
+          use Prometheus::Middleware::Exporter, per_application_opts
           run -> { [ '404', {}, ["Not Found"] ] }
         end
 
